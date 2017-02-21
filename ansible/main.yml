@@ -1,0 +1,23 @@
+---
+- hosts: all
+
+  vars:
+    - pre_package:
+      - name: epel-release
+    - package:
+      - name: java-1.8.0-openjdk-devel
+      - name: java-1.8.0-openjdk-headless
+      - name: libunwind
+      - name: unzip
+      - name: which
+    - heron_version: 0.14.5
+    - supervisor_programs:
+      - name: "heron-tracker"
+        command: "/usr/local/bin/heron-tracker"
+      - name: "heron-ui"
+        command: "/usr/local/bin/heron-ui"
+
+  roles:
+    - packages
+    - heron
+    - supervisor
