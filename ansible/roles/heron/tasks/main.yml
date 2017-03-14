@@ -11,16 +11,6 @@
     dest: "/tmp/heron-tools-install-{{ heron_version }}-centos.sh"
     mode: 0755
 
-#- lineinfile:
-#    path: /root/.bashrc
-#    line: "export JAVA_HOME=/usr/lib/jvm/jre/"
-
-#- name: Check Java Installed
-#  shell: "/usr/bin/javac -version"
-#  environment:
-#    JAVA_HOME: /usr/lib/jvm/java/
-#    PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-
 - name: Install heron client
   shell: "/tmp/heron-client-install-{{ heron_version }}-centos.sh"
   environment:
