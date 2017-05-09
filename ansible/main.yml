@@ -10,7 +10,7 @@
       - name: libunwind
       - name: unzip
       - name: which
-    - heron_version: 0.14.6
+    - heron_version: 0.14.7
     - supervisor_programs:
       - name: "heron-tracker"
         command: "/usr/local/bin/heron-tracker"
